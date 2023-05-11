@@ -1,0 +1,11 @@
+Beautifulsoup:
+
+Its python library used to parse html files and extract texts and other kinds of 
+of them.
+
+To start you need to install Beautifulsoup library by typing the command 
+    pip install beautifulsoup
+
+then you can use by creating a beautifulsoup instance and pass to it a web page.
+
+After than you can deal with the web page as a Tree and traverse as you like.
