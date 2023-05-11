@@ -4,7 +4,7 @@ import re
 
 clientSocket = socket.socket(socket.AF_INET , socket.SOCK_STREAM)
 clientSocket.connect(('127.0.0.1' , 7001))
-url = 'http//local_server/file_content' 
+# http//local_server/file_content
 
 def getUrlAddrees(string):
     clientSocket.send(string.encode())
