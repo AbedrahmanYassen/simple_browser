@@ -39,8 +39,8 @@ def handleLocalServer():
             s = socket.socket(socket.AF_INET , socket.SOCK_STREAM)
             s.connect((IP , port))
             order = url.split('/')[-1]
+            s.send(order.encode())
             while (True):
-                s.send(order.encode())
                 message = s.recv(1024)
                 if 'end' in message.decode() :
                     file1.close() 

@@ -20,5 +20,3 @@ while True :
                 client.send("end".encode()) 
                 client.close()
                 break
-    else :
-        client.send('end'.encode())
