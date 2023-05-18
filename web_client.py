@@ -32,21 +32,22 @@ def offlineServer():
         
 
 def handleLocalServer():
+    
     if('local_server' in url):
         file1 = open("File.txt", "w")
         IP , port = dc.getUrlAddrees(url)
         s = socket.socket(socket.AF_INET , socket.SOCK_STREAM)
         s.connect((IP , port))
-        print(f"This has been excuted({IP},{port})")
         order = url.split('/')[-1]
-        print(order)
         while (True):
             s.send(order.encode())
             message = s.recv(1024)
             if 'end' in message.decode() :
                 file1.close() 
+                s.close()
                 break
             file1.write(message.decode())
+
 
 def searchButtonHandler():
     global url

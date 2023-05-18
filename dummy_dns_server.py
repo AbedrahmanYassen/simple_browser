@@ -11,4 +11,5 @@ while True :
     message = client.recv(1024)
     if('local_server' in message.decode()  ):
         client.send(f"{IP}-{7000}" .encode())
+        client.close()
         
